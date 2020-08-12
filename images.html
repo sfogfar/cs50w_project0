@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>Image Search</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
@@ -14,11 +14,21 @@
         </div>
     </nav>
     <body>
-        <form class="search_bar" action="https://google.com/search">
-            <input class="entry" type="text" name="q">
-            <!-- Set tbm to image search using hidden input -->
-            <input class="entry" type="hidden" name="tbm" value="isch">
-            <input class="submit" type="submit" value="Google Image Search">
-        </form>
+        <div class="d-flex align-items-center min-vh-100">
+            <div class="container">
+                <form action="https://google.com/search">
+                    <div class="form-group row">
+                        <input class="form-control col-sm-6 mx-auto" type="text" name="q">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-auto mx-auto">
+                            <!-- Set tbm to image search using hidden input -->
+                            <input type="hidden" name="tbm" value="isch">
+                            <input class="btn-light" type="submit" value="Google Image Search">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
